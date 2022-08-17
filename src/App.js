@@ -16,12 +16,16 @@ function App() {
       <Routes>
         <Route  path="/" element={<Home/>}></Route>
         <Route path="/posts" element={<Home/>}></Route>
-        <Route path="/register" element= {currentUser ? <Home /> : <Register />}>
+        <Route path="/register" element={<Register/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/write" element={<Write/>}></Route>
+        
+        {/* <Route path="/register" element= {currentUser ? <Home /> : <Register />}>
          
         </Route>
-        <Route path="/login" element={currentUser ? <Home /> : <Login />}></Route>
+        <Route path="/login" element={currentUser ? <Home /> : <Login />}></Route> */}
         <Route path="/post/:id" element={<Single />}></Route>
-        <Route path="/write" element={currentUser ? <Write /> : <Home />} ></Route>
+        {/* <Route path="/write" element={currentUser ? <Write /> : <Home />} ></Route> */}
         
       </Routes>
     </Router>
